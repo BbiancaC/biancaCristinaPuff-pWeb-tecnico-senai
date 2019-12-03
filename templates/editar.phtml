@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+    <title>Editar</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Editar Carro</h1>
+        <div class="d-flex justify-content-center">
+            <a href="/" class='btn btn-primary'>Voltar</a>
+        </div>
+
+        <form action="/editar/" method="post">
+
+            <div class="col-12 d-flex justify-content-center my-2">
+                <label class="mr-2">ID do carro</label>
+                <input type="number" name="id">
+            </div>
+            <div class="col-12 d-flex justify-content-center my-2">
+                <label class="mr-2">Novo modelo</label>
+                <input type="text" name="modelo">
+            </div>
+            <div class="col-12 d-flex justify-content-center my-2">
+
+                <label class="mr-2">Nova marca</label>
+                <input type="text" name="marca">
+            </div>
+            <div class="col-12 d-flex justify-content-center my-2">
+
+                <label class="mr-2">Novo ano</label>
+                <input type="number" name="ano">
+            </div>
+
+            <div class="col-12 d-flex justify-content-center my-2">
+                <button type="submit">Editar</button>
+
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

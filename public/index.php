@@ -29,5 +29,13 @@ $middleware($app);
 $routes = require __DIR__ . '/../src/routes.php';
 $routes($app);
 
+// Register routes
+$routes = require __DIR__ . '/../src/editarrota.php';
+$routes($app);
+
+// Register routes
+$routes = require __DIR__ . '/../src/inserirrota.php';
+$routes($app);
+
 // Run app
 $app->run();
