@@ -20,6 +20,8 @@ return function (App $app) {
     });
     $app->post('/inserir/', function (Request $request, Response $response, array $args) use ($container) {
 
+        //Aqui eu fiz o post, para que o carro seja inserido no banco de dados
+
         // Sample log message
         $container->get('logger')->info("Slim-Skeleton '/inserir/' route");
 

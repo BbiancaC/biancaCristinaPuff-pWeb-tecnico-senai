@@ -21,6 +21,8 @@ return function (App $app) {
 
     $app->post('/editar/', function (Request $request, Response $response, array $args) use ($container) {
 
+        //Aqui eu fiz o Post para editar o carro no banco de dados
+
         // Sample log message
         $container->get('logger')->info("Slim-Skeleton '/editar/' route");
 

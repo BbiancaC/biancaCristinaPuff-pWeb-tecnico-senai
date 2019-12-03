@@ -9,6 +9,9 @@ return function (App $app) {
 
     $app->get('/', function (Request $request, Response $response, array $args) use ($container) {
 
+        //Aqui eu fiz a conexão no banco de dados, selecionei todos os carros e donos dos carros, e mandei para a tela
+        //pela variável carros
+
         // Sample log message
         $container->get('logger')->info("Slim-Skeleton '/' route");
 

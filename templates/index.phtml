@@ -1,53 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
-    <title>Carro</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+  <title>Carro</title>
 </head>
+
 <body>
-<div class="container">
+  <div class="container">
     <h1 class="text-center">Lista de Carros</h1>
     <div class="d-flex justify-content-center">
-        <a href="/editar/" class='btn btn-primary mr-4'>Editar</a>
-        <a href="/inserir/" class='btn btn-primary'>Inserir</a>
+      <!-- Aqui eu fiz os botões para ir para tela de editar e inserir carro -->
+      <a href="/editar/" class='btn btn-primary mr-4'>Editar</a>
+      <a href="/inserir/" class='btn btn-primary'>Inserir</a>
 
     </div>
 
-<table class="table table-dark mt-3">
-  <thead>
-    <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Modelo</th>
-      <th scope="col">Marca</th>
-      <th scope="col">Ano</th>
-      <th scope="col">Dono</th>
-      
-    </tr>
-  </thead>
-  <tbody>
-      <?php
+    <!-- Aqui eu fiz a tabela usando boostrap -->
+    <table class="table table-dark mt-3">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Modelo</th>
+          <th scope="col">Marca</th>
+          <th scope="col">Ano</th>
+          <th scope="col">Dono</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+        //Esse foreach pega todos os carros que vieram na variável carros e repete para inserí-los na tabela
         foreach ($carros as $key => $value) {
-            echo '
+          echo '
                 <tr>
-                    <th scope="row">'.$carros[$key]['id'].'</th>
-                    <td>'.$carros[$key]['modelo'].'</td>
-                    <td>'.$carros[$key]['marca'].'</td>
-                    <td>'.$carros[$key]['ano'].'</td>
-                    <td>'.$carros[$key]['nome'].'</td>
+                    <th scope="row">' . $carros[$key]['id'] . '</th>
+                    <td>' . $carros[$key]['modelo'] . '</td>
+                    <td>' . $carros[$key]['marca'] . '</td>
+                    <td>' . $carros[$key]['ano'] . '</td>
+                    <td>' . $carros[$key]['nome'] . '</td>
                 </tr>
 
             
             ';
         }
-      
-      ?>
-    
-  </tbody>
-</table>
-</div>
-    
+
+        ?>
+
+      </tbody>
+    </table>
+  </div>
+
 </body>
+
 </html>
